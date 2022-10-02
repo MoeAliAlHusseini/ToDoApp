@@ -1,7 +1,5 @@
 .Home {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items:flex-start;
-    text-align: center;
+    margin: 0px 30px;
 }
