@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 
 import SearchInput from '../../components/SearchInput'
+import List from '../../components/List'
 
 import './Home.css'
 
@@ -24,6 +25,7 @@ const Home = () => {
         else {
             setListOfTasks([...listOfTasks, newTask]);
         }
+        setNewTask('');
     }
 
     return (
@@ -32,6 +34,8 @@ const Home = () => {
                 This is the Homepage
             </p>
             <SearchInput onChange={setNewTask} value={newTask} onClear={() => setNewTask('')} onSubmit={handleOnSubmit} isSubmitDisabled={!newTask}/>
+            {/* <div style={{marginTop: 30, borderWidth: 1, borderStyle: 'solid', borderColor: 'black'}} /> */}
+            <List list={listOfTasks} />
     </div>
     )
 }
