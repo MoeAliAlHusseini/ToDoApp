@@ -1,0 +1,15 @@
+.input__wrapper {
+    width: '100%';
+    padding: 2px;
+}
+
+.submit__button {
+    margin-left: 5px;
+}
+
+.clear__button {
+    color: blue;
+    font-style: italic;
+    font-size: small;
+    line-height: 0pt;
+}
