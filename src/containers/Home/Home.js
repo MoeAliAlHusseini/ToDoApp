@@ -11,9 +11,6 @@ const Home = () => {
     const [listOfTasks, setListOfTasks] = useState([]);
 
     useEffect(() => {
-        console.log("the homepage being rendered")
-        console.log("new task: ", newTask)
-        console.log("listOfTasks: ", listOfTasks)
     });
 
     const handleOnSubmit = () => {
@@ -39,7 +36,6 @@ const Home = () => {
                 This is the Homepage
             </p>
             <SearchInput onChange={setNewTask} value={newTask} onClear={() => setNewTask('')} onSubmit={handleOnSubmit} isSubmitDisabled={!newTask}/>
-            {/* <div style={{marginTop: 30, borderWidth: 1, borderStyle: 'solid', borderColor: 'black'}} /> */}
             <List list={listOfTasks} onDelete={(index) => handleOnDelete(index)} />
     </div>
     )

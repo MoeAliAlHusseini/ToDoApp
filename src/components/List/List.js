@@ -1,5 +1,9 @@
 import React from 'react';
 
+import Item from '../Item/Item';
+
+import { Link } from 'react-router-dom'
+
 import Images from '../../images';
 
 import './List.css';
@@ -9,12 +13,12 @@ const List = ({list = ['hello', 'yes', 'oui'], onDelete}) => {
         <div className='list__wrapper'>
            {list.map((item, index) => {
             return (
-                <div className='text__wrapper'>
+                <Link key={index} className='text__wrapper' to={`/item/${index}`} state={{title: item, id: index}} component={<Item/>} >
                      <p className='text'>
                         {item}
                     </p>
                     <img className='icon' onClick={() => onDelete(index)} alt='trash' src={Images.trashicon} />
-                </div>
+                </Link>
             )
            })}
         </div>
