@@ -28,6 +28,11 @@ const Home = () => {
         setNewTask('');
     }
 
+    const handleOnDelete = (id) => {
+        let updatedListOfTasks = listOfTasks.filter((item, index) => index !== id)
+        setListOfTasks(updatedListOfTasks);
+    }
+
     return (
         <div className='Home'>
             <p>
@@ -35,7 +40,7 @@ const Home = () => {
             </p>
             <SearchInput onChange={setNewTask} value={newTask} onClear={() => setNewTask('')} onSubmit={handleOnSubmit} isSubmitDisabled={!newTask}/>
             {/* <div style={{marginTop: 30, borderWidth: 1, borderStyle: 'solid', borderColor: 'black'}} /> */}
-            <List list={listOfTasks} />
+            <List list={listOfTasks} onDelete={(index) => handleOnDelete(index)} />
     </div>
     )
 }
