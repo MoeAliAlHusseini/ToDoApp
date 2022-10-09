@@ -1,4 +1,10 @@
+.list__wrapper {
+    margin-top: 50px;
+}
+
 .text__wrapper {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
     padding: 10px 20px;
     width: '100%';
@@ -10,4 +16,10 @@
 .text {
     font-size: smaller;
     line-height: 0px;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    margin-left: auto;
 }
