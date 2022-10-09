@@ -6,7 +6,6 @@ import Item from '../components/Item/Item';
 import { 
     Route,
     Routes,
-    Navigate 
   } from 'react-router-dom';
 
 
