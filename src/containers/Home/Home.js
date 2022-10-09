@@ -25,6 +25,10 @@ const Home = () => {
         setNewTask('');
     }
 
+    const handleOnClear = () => {
+        setNewTask('');
+    }
+
     const handleOnDelete = (id) => {
         let updatedListOfTasks = listOfTasks.filter((item, index) => index !== id)
         setListOfTasks(updatedListOfTasks);
@@ -35,7 +39,7 @@ const Home = () => {
             <p>
                 This is the Homepage
             </p>
-            <SearchInput onChange={setNewTask} value={newTask} onClear={() => setNewTask('')} onSubmit={handleOnSubmit} isSubmitDisabled={!newTask}/>
+            <SearchInput onChange={setNewTask} value={newTask} onClear={handleOnClear} onSubmit={handleOnSubmit} isSubmitDisabled={!newTask}/>
             <List list={listOfTasks} onDelete={(index) => handleOnDelete(index)} />
     </div>
     )
